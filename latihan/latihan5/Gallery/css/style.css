@@ -1,190 +1,183 @@
 /* Font */
 @font-face {
-    font-family: 'BebasNeue';
-    src: url(../font/bebasneue-regular-webfont.woff) format('woff');
+  font-family: "BebasNeue";
+  src: url(../font/bebasneue-regular-webfont.woff) format("woff");
 }
 
 /* Style utama */
 body {
-    font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
-    background-color: #ddd;
-    background-image: url(../img/background\ jumanji\ .\ png.webp);
-    background-size: cover;
-
+  font: 18px/36px "BebasNeue", "Arial Narrow", arial, sans-serif;
+  background-color: #ddd;
+  background-image: url(../img/background\ jumanji\ .\ png.webp);
+  background-size: cover;
 }
 
 h1 {
-    color: #735102;
-    font-size: 100px;
-    margin: 50px 0;
-    text-align: center;
-    text-shadow: 1px 3px 1px rgb(248, 246, 246) ;
+  color: #735102;
+  font-size: 100px;
+  margin: 50px 0;
+  text-align: center;
+  text-shadow: 1px 3px 1px rgb(248, 246, 246);
 }
 
 .container {
-    width: 1283px;
-    backdrop-filter: blur(5px);
-    margin: auto;
-    padding: 40px;
-    box-shadow: 0 0 7px 7px rgba(0,0,0,.3);
-    border-radius: 50px;
+  width: 1283px;
+  backdrop-filter: blur(5px);
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
 }
 
 .Gallery li {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 
+  /*overflow: hidden;*/
 
-    /*overflow: hidden;*/
-
-    border: 5px solid #fdfcf8;
-    float: left;
-    margin-right: 11px;
-    position: relative;
+  border: 5px solid #fdfcf8;
+  float: left;
+  margin-right: 11px;
+  position: relative;
 }
 
 .Gallery li,
 .Gallery li img,
 .Gallery li span {
-    border-radius: 50%;
-
+  border-radius: 50%;
 }
 
 .Gallery li span {
-    display: block;
-    width: 300px;
-    height: 300px;
-    background-color: rgba(200,200,200,.5);
-    position: absolute;
-    top: 0;
-    text-align: center;
-    line-height: 300px;
-    font-size: 35px;
-    color: #735102;
-    text-shadow: 1px 1px 1px #ddd;
-    opacity: 0;
-    transition: .3s;;
-    transform: scale(0) rotate(0);
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 300px;
+  font-size: 35px;
+  color: #735102;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transition: 0.3s;
+  transform: scale(0) rotate(0);
 }
 
-.Gallery  li a:hover span {
-    opacity: 1;
-    transform: scale(1) rotate(360deg);
+.Gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
-
 
 /* overlay */
 .overlay {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0);
-    z-index: 9999;
-    transition: .8s;
-    text-align: center;
-    padding: 100px 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.8s;
+  text-align: center;
+  padding: 100px 0;
 }
 
 .overlay:target {
-    width: auto;
-    height: auto;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,0,0,.7);
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .overlay img {
-    max-height: 100%;
-    box-shadow: 2px 2px 12px rgba(0,0,0,.5);
-
+  max-height: 100%;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .overlay:target img {
-    animation: zoomDanFade 1s;
+  animation: zoomDanFade 1s;
 }
 
 .overlay .close {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    margin-left: -20px;
-    color: white;
-    text-decoration: none;
-    background-color: black;
-    border: 1px solid white;
-    line-height: 15px;
-    padding: 5px;
-    opacity: 0;
-
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -20px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 15px;
+  padding: 5px;
+  opacity: 0;
 }
 
 .overlay:target .close {
-    animation: slideDwonFade .5 .5s forwards;
+  animation: slideDwonFade 0.5 0.5s forwards;
 }
 
 .overlay:target .next,
 .overlay:target .prev {
-    animation: FadeAjah .5s .5s forwards;
+  animation: FadeAjah 0.5s 0.5s forwards;
 }
 /* navigasi */
-.next, .prev {
-    width: 88px;
-    height: 80px;
-    background-image: url(../img/next3__1_-removebg-preview.png);
-    position: absolute;
-    text-indent: -9999px;
-    top: 44%;
-    margin-left: 50px;
-    opacity: 0;
+.next,
+.prev {
+  width: 88px;
+  height: 80px;
+  background-image: url(../img/next3__1_-removebg-preview.png);
+  position: absolute;
+  text-indent: -9999px;
+  top: 44%;
+  margin-left: 50px;
+  opacity: 0;
 }
 
 .prev {
-    background-image: url(../img/prev4.png.png);
-    margin-left: -130px;
+  background-image: url(../img/prev4.png.png);
+  margin-left: -130px;
 }
-
 
 /* Animasi */
 
 @keyframes FadeAjah {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-
 @keyframes zoomDanFade {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes slideDwonFade {
-    0% {
-        opacity: 0;
-        margin-top: -20px;
-    }
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
 
-    100% {
-        opacity: 1;
-        margin-top: 0;
-    }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
 }

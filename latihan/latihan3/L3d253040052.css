@@ -1,57 +1,50 @@
-body{
-    background-image: url(/background.png);
-    background-repeat: repeat-x;
-    text-align: center;
+body {
+  background-image: url(/background.png);
+  background-repeat: repeat-x;
+  text-align: center;
 }
 h1 {
-    font-family: Comic Sans MS;
-    font-size: 60px;
-    color: darkblue;
-    text-align: center;
- 
+  font-family: Comic Sans MS;
+  font-size: 60px;
+  color: darkblue;
+  text-align: center;
 }
-h4{
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
+h4 {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
-p{
-    text-align: justify;
+p {
+  text-align: justify;
 }
 
 h3 a {
-    color: red;
+  color: red;
 }
-
 
 #atas {
-    color: orange;
-    text-align: center;
+  color: orange;
+  text-align: center;
 }
 
-#bawah  {
-    
-    line-height: 1.5;
-    text-align: center;
-    
+#bawah {
+  line-height: 1.5;
+  text-align: center;
 }
 
-#bawah a:hover{
-    background-color: blue;
-    color: white;
+#bawah a:hover {
+  background-color: blue;
+  color: white;
 }
 
 #bawah a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #bawah a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
-.sosmed:hover{
-    color: red;
+.sosmed:hover {
+  color: red;
 }
-
-
