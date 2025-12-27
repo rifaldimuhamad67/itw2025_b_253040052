@@ -25,6 +25,16 @@ a,
 }
 
 /* DESKTOP NAV */
+#desktop-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+}
 
 nav,
 .nav-links {
@@ -34,7 +44,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 8vh;
 }
 
 .nav-links {
@@ -95,23 +105,27 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
-  width: fit-content;
+  background-color: rgba(114, 108, 108, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  width: 250px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 0.3rem;
   text-align: center;
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+.menu-links a:hover {
+  color: #555;
+}
 .menu-links li {
   list-style: none;
 }
@@ -158,10 +172,12 @@ section {
   display: flex;
 }
 
+
 /* PROFILE SECTION */
 
 #profile {
   display: flex;
+  margin-top: 15vh;
   justify-content: center;
   gap: 5rem;
   height: 80vh;
@@ -240,7 +256,7 @@ section {
 .btn-color-1,
 .btn-color-2:hover {
   background: rgb(53, 53, 53);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .btn-color-1:hover {
@@ -249,6 +265,7 @@ section {
 
 .btn-color-2 {
   background: none;
+  color: rgb(0, 0, 0);
 }
 
 .btn-color-2:hover {
@@ -329,6 +346,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-left: 25%;
 }
 
 .article-container {
@@ -357,6 +375,12 @@ article .icon {
   position: relative;
 }
 
+.about-containers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 3rem; */
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -380,48 +404,85 @@ article .icon {
 
 /* CONTACT */
 
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
+#Contact {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} 
+.Contact {
+  min-height: 100vh;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
 }
-
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+.container {
+  max-width: 800px;
+  margin: auto;
 }
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+.container h2{
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: black;
 }
-
-.contact-info-container p {
-  font-size: larger;
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1rf);
+  grid-gap: 30px;
 }
-
-.contact-icon {
-  cursor: default;
+.contact-form {
+  text-align: left;
 }
-
-.email-icon {
-  height: 2.5rem;
+.contact-form h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
 }
-
+.form-group {
+  margin-bottom: 20px;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(234, 235, 235);
+  color: rgb(53, 53, 53);
+}
+input:focus,
+ textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+ }
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #666766;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: rgb(0, 0, 0);
+}
+.contact-info {
+  text-align: left;
+}
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.contact-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: 6vh;
   margin: 0 1rem;
 }
 
@@ -455,6 +516,8 @@ footer p {
   #experience,
   .experience-details-container {
     margin-top: 2rem;
+    margin-left: 3.5rem;
+    margin-right: 1rem;
   }
   #profile,
   .section-container {
@@ -469,7 +532,7 @@ footer p {
   }
   section {
     margin: 0 5%;
-  }
+}
   .section__pic-container {
     width: 275px;
     height: 275px;
@@ -477,6 +540,9 @@ footer p {
   }
   .about-containers {
     margin-top: 0;
+  }  
+  .details-container {
+    margin-top: 1rem;
   }
 }
 
