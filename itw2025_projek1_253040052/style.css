@@ -492,111 +492,406 @@ footer p {
 
 
 
+/* ============================================ */
+/* RESPONSIVE MEDIA QUERIES */
+/* ============================================ */
+
+
+/* Laptop Besar (1400px - 1920px) */
+@media screen and (max-width: 1920px) {
+  section {
+    margin: 0 8rem;
+  }
+}
+
+/* Laptop Sedang (1200px - 1400px) */
 @media screen and (max-width: 1400px) {
+  section {
+    margin: 0 6rem;
+  }
+  
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
+    gap: 3rem;
   }
+  
   .about-containers {
     flex-wrap: wrap;
   }
+  
   #contact,
   #projects {
     height: fit-content;
   }
+  
+  .nav-links {
+    gap: 1.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .experience-details-container {
+    margin-left: 15%;
+  }
 }
 
+/* Tablet Landscape & Laptop Kecil (992px - 1200px) */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
+  
   #hamburger-nav {
+    display: flex;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
   }
+  
+  section {
+    margin: 0 4rem;
+  }
+  
+  #profile {
+    display: block;
+    margin-top: 12vh;
+  }
+  
+  .section__pic-container {
+    width: 350px;
+    height: 350px;
+    margin: 2rem auto;
+  }
+  
   #experience,
   .experience-details-container {
     margin-top: 2rem;
-    margin-left: 3.5rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
-  #profile,
+  
   .section-container {
     display: block;
   }
+  
   .arrow {
     display: none;
   }
+  
   section,
   .section-container {
     height: fit-content;
   }
-  section {
-    margin: 0 5%;
-}
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
+  
   .about-containers {
-    margin-top: 0;
-  }  
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+  
   .details-container {
     margin-top: 1rem;
   }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* Tablet Portrait (768px - 992px) */
+@media screen and (max-width: 992px) {
+  section {
+    margin: 0 3rem;
   }
+  
+  .section__pic-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .about-containers {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-container {
+    gap: 2rem;
+  }
+  
+  article {
+    width: 8rem;
+  }
+  
+  .experience-sub-title {
+    font-size: 1.5rem;
+  }
+  
+  .Contact {
+    padding: 30px 20px;
+  }
+  
+  .container h2 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile Landscape (600px - 768px) */
+@media screen and (max-width: 768px) {
+  section {
+    margin: 0 2rem;
+  }
+  
+  nav {
+    padding: 0 1rem;
+  }
+  
+  #hamburger-nav {
+    padding: -1rem;
+  }
+  
+  .section__pic-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-container {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .btn {
+    padding: 0.8rem;
+    width: 7rem;
+  }
+  
+  .menu-links a {
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+  
+  .experience-details-container {
+    margin-left: 0;
+  }
+  
+  .article-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media screen and (max-width: 600px) {
+  section {
+    margin: 0 5%;
+    padding-top: 2vh;
+  }
+  
   #profile {
     height: 83vh;
     margin-bottom: 0;
+    margin-top: 10vh;
   }
-  article {
-    font-size: 1rem;
+  
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    max-width: 250px;
+    margin: 1rem auto;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+  
+  .title {
+    font-size: 1.8rem;
   }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
+  
+  .section__text__p2 {
     font-size: 1.25rem;
   }
+  
   .logo {
     font-size: 1.5rem;
   }
+  
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+  
+  .menu-links a {
+    font-size: 1.2rem;
   }
-  .section__text__p2 {
+  
+  article {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 9rem;
+  }
+  
+  .experience-sub-title {
     font-size: 1.25rem;
   }
-  .title {
-    font-size: 2rem;
+  
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
   }
+  
+  .contact-info-container {
+    margin: 0;
+  }
+  
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  
   .text-container {
     text-align: justify;
+  }
+  
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  
+  .Contact {
+    padding: 30px 15px;
+  }
+  
+  .container h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form h3,
+  .contact-info h3 {
+    font-size: 20px;
+  }
+  
+  button {
+    width: 100%;
+  }
+}
+
+/* Mobile Kecil (320px - 480px) */
+@media screen and (max-width: 480px) {
+  section {
+    margin: 0 3%;
+  }
+  
+  .section__pic-container {
+    height: 50vw;
+    max-width: 220px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.7rem;
+    width: 6.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .details-container {
+    padding: 1rem;
+  }
+  
+  .article-container {
+    gap: 1rem;
+  }
+  
+  article {
+    width: 100%;
+    max-width: 8rem;
+  }
+  
+  .icon {
+    height: 1.5rem;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .menu-links {
+    width: 200px;
+  }
+  
+  .menu-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Mobile Sangat Kecil (< 320px) */
+@media screen and (max-width: 320px) {
+  .section__pic-container {
+    max-width: 180px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-container {
+    flex-direction: column;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .container h2 {
+    font-size: 20px;
+  }
+  
+  .contact-form h3,
+  .contact-info h3 {
+    font-size: 18px;
   }
 }
