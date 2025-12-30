@@ -39,13 +39,12 @@ Website ini dibuat menggunakan:
 /itw2025_project1_253040072/
 ├─ asset/
 │  ├─ image-1.png
-│  ├─ image-2.png
 ├─ asset/
 │  ├─ icon
-├─ README.md
 ├─ index.html
 ├─ script.js
-└─ style.css
+├─ style.css
+└─ README.md
 
 ## 📸 Contoh Karya
 
