@@ -36,7 +36,7 @@ Website ini dibuat menggunakan:
 
 ## 📂 Struktur Direktori
 
-/itw2025_project1_253040072/
+/itw2025_project1_253040052/
 ├─ asset/
 │  ├─ image-1.png
 ├─ asset/
