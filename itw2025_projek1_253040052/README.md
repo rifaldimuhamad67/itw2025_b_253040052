@@ -34,7 +34,7 @@ Website ini dibuat menggunakan:
 - **CSS**
 - **JavaScript** (dasar)
 
-## 📂 Struktur Direktori
+## 📂 Struktur Folder
 
 /itw2025_project1_253040052/
 ├─ asset/
