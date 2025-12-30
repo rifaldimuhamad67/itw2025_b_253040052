@@ -36,17 +36,16 @@ Website ini dibuat menggunakan:
 
 ## 📂 Struktur Direktori
 
-itw2025_projek1_253040052
-├── assets/
-│   ├── image-1.png
-│   ├── image-2.png
-├── assets/
-│   ├── icon
-├── README.md
-├── index.html
-├── script.js
-├── style.css
-
+/itw2025_project1_253040072/
+├─ asset/
+│  ├─ image-1.png
+│  ├─ image-2.png
+├─ asset/
+│  ├─ icon
+├─ README.md
+├─ index.html
+├─ script.js
+└─ style.css
 
 ## 📸 Contoh Karya
 
