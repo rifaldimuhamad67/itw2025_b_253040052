@@ -23,17 +23,6 @@ body {
 .nav-link.active {
     font-weight: 700;
 }
-.button-secundary {
-    width: 133px;
-    height: 40px;
-    background-color: rgb(254, 254, 255);
-    color: var(--pr-color);
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 20px;
-}
-
 
 /* hero section */
 
