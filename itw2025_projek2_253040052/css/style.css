@@ -198,3 +198,36 @@ h2 {
 .container h1 {
     color: #fff;
 }
+
+/* contact */
+
+#contact {
+    background-image: url(../asset/img/fortif.jpeg);
+    margin-top: 158px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#contact .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#contact .container {
+    padding: 148px 0 148px 0;
+}
+
+#contact h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+  color: #fff;
+}
+
+#contact ul {
+    list-style: none;
+    margin-left:0 ;
+}
+#contact h6 {
+    font-size: 20px;
+}
